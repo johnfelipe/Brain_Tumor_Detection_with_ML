@@ -33,7 +33,7 @@ interface = gr.Interface(title = "Brain Tumor Classifier",
              fn=classify_image,
              inputs=image,
              outputs=[label1, label2, label3],
-             examples=[["Y3.jpg"],["21no.jpg"],["Y6.jpg"],["N17.jpg"]["Y6.jpg"]],
+             examples=[["Y3.jpg"],["21no.jpg"],["Y6.jpg"],["N17.jpg"],["Y6.jpg"]],
              interpretation=None,
              layout="unaligned",
              theme='dark-grass')
