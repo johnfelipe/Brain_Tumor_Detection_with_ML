@@ -1,6 +1,6 @@
+jinja2
 gradio==2.8.8
 numpy
 pandas
 catboost
 Pillow
-jinja2
