@@ -1,4 +1,4 @@
-gradio
+gradio==2.8.8
 numpy
 pandas
 catboost
