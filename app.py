@@ -29,7 +29,7 @@ label3 = gr.outputs.Label(label="Symptoms")
 image = gr.inputs.Image()
 
 interface = gr.Interface(title = "Brain Tumor Classifier",
-             description="NOTE : Please crop the image using the in-built image editor on the top right section of the input window in case of too much blank space or any unecessary text such that some black blank space should be there for accurate results, approx 20-40 pixels (0.8 - 1.0 cm) each side.",
+             description="NOTE : Please crop the image such that its aspect ratio becomes 1:1 (square crop), leaving some empty blank space on each of the sides of image for better accuracy",
              fn=classify_image,
              article="This an Online tool representing AI for a good cause, this online AI powered web application is built by Rauhan Ahmed Siddiqui, using this tool, one could know whether his/her brain MRI report contains a tumor or not with great accuracy, no matter how difficult it is to see that from a human eye.",
              inputs=image,
