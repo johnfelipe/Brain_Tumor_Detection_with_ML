@@ -13,7 +13,7 @@ def classify_image(image):
   image = ImageOps.grayscale(image)
   image = np.array(image).reshape((1, -1))
   res = {labels[0]:float(model.predict_proba(image)[0][1]), labels[1]: float(model.predict_proba(image)[0][0])}
-  text = "Are you sure this is a brain MRI picture, if yes, then following are the results obtained"
+  text = "Are you sure this is a brain MRI picture? if yes, then following are the results obtained"
   if model.predict_proba(image)[0][0] < 0.5:
       pred = "The MRI image contains a Brain Tumor"
       symptoms = "Possible Symptoms : New or increasingly strong headaches, blurred vision, loss of balance, confusion and seizures (In some cases, there may be no symptoms as well)"
@@ -34,7 +34,7 @@ interface = gr.Interface(title = "Brain Tumor Classifier",
              article="This an Online tool representing AI for a good cause, this online AI powered web application is built by Rauhan Ahmed Siddiqui, using this tool, one could know whether his/her brain MRI report contains a tumor or not with great accuracy, no matter how difficult it is to see that from a human eye.",
              inputs=image,
              outputs=[label1, label2, label3, label4],
-             examples=[["Y3.jpg"],["21no.jpg"],["Y6.jpg"],["N17.jpg"],["Y6.jpg"]],
+             examples=[["images/Y3.jpg"],["images/21no.jpg"],["images/Y6.jpg"],["images/N17.jpg"],["images/Y6.jpg"]],
              interpretation=None,
              theme='dark-grass')
  
